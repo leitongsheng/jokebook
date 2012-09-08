@@ -1,0 +1,205 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="1.1" toolsVersion="2182" systemVersion="11E53" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" initialViewController="nSu-X9-Ff3">
+    <dependencies>
+        <deployment defaultVersion="1296" identifier="iOS"/>
+        <development defaultVersion="4200" identifier="xcode"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="1181"/>
+    </dependencies>
+    <scenes>
+        <!--Navigation Controller-->
+        <scene sceneID="CzR-rr-5NP">
+            <objects>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="udt-jK-FdM" userLabel="First Responder" sceneMemberID="firstResponder"/>
+                <navigationController definesPresentationContext="YES" id="nSu-X9-Ff3" sceneMemberID="viewController">
+                    <simulatedNavigationBarMetrics key="simulatedTopBarMetrics" barStyle="blackTranslucent" prompted="NO"/>
+                    <navigationBar key="navigationBar" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" barStyle="blackTranslucent" id="evK-Ay-afb">
+                        <rect key="frame" x="0.0" y="-44" width="0.0" height="44"/>
+                        <autoresizingMask key="autoresizingMask"/>
+                    </navigationBar>
+                    <connections>
+                        <segue destination="LCE-2L-muj" kind="relationship" relationship="rootViewController" id="xw6-Qi-582"/>
+                    </connections>
+                </navigationController>
+            </objects>
+            <point key="canvasLocation" x="-644" y="-177"/>
+        </scene>
+        <!--Folk Song View Controller - 开心词典-->
+        <scene sceneID="861-Tv-dmt">
+            <objects>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="MNy-Ol-Rav" userLabel="First Responder" sceneMemberID="firstResponder"/>
+                <viewController id="LCE-2L-muj" customClass="folkSongViewController" sceneMemberID="viewController">
+                    <navigationItem key="navigationItem" title="开心词典" id="ujc-8c-an3">
+                        <barButtonItem key="backBarButtonItem" title="返回" id="7Ca-KX-4iX"/>
+                    </navigationItem>
+                    <simulatedNavigationBarMetrics key="simulatedTopBarMetrics" barStyle="blackTranslucent" prompted="NO"/>
+                    <connections>
+                        <segue destination="4oY-3F-rKX" kind="custom" identifier="item1" id="PPg-Sd-UmT"/>
+                    </connections>
+                </viewController>
+            </objects>
+            <point key="canvasLocation" x="-209" y="-196"/>
+        </scene>
+        <!--View Controller - 云栏目-->
+        <scene sceneID="cKe-xt-5fk">
+            <objects>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="N2H-Ce-IFl" userLabel="First Responder" sceneMemberID="firstResponder"/>
+                <viewController title="云栏目" id="4oY-3F-rKX" customClass="BBViewController" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="qo1-9N-1Jp">
+                        <rect key="frame" x="0.0" y="20" width="320" height="460"/>
+                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                        <subviews>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" image="ItemBg.png" id="C1R-RY-3EC">
+                                <rect key="frame" x="0.0" y="0.0" width="320" height="460"/>
+                                <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                            </imageView>
+                            <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" rowHeight="60" sectionHeaderHeight="22" sectionFooterHeight="22" id="DES-hD-a61">
+                                <rect key="frame" x="0.0" y="0.0" width="320" height="520"/>
+                                <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                                <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                <connections>
+                                    <outlet property="dataSource" destination="4oY-3F-rKX" id="cJF-MV-mPK"/>
+                                    <outlet property="delegate" destination="4oY-3F-rKX" id="GZs-9j-5LT"/>
+                                </connections>
+                            </tableView>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
+                    </view>
+                    <simulatedNavigationBarMetrics key="simulatedTopBarMetrics" barStyle="blackTranslucent" prompted="NO"/>
+                    <connections>
+                        <outlet property="mTableView" destination="DES-hD-a61" id="WwY-AU-mlC"/>
+                        <segue destination="6xj-ua-GA6" kind="custom" identifier="item1_1" id="W3O-W3-dyl"/>
+                    </connections>
+                </viewController>
+            </objects>
+            <point key="canvasLocation" x="168" y="-208"/>
+        </scene>
+        <!--Every Day List View Controller-->
+        <scene sceneID="Tsb-Pc-VtJ">
+            <objects>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="JoS-yl-9e2" userLabel="First Responder" sceneMemberID="firstResponder"/>
+                <viewController id="6xj-ua-GA6" customClass="EveryDayListViewController" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="Bxa-Tj-auj">
+                        <rect key="frame" x="0.0" y="20" width="320" height="460"/>
+                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                        <subviews>
+                            <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" rowHeight="50" sectionHeaderHeight="22" sectionFooterHeight="22" id="Wdk-cz-7mr">
+                                <rect key="frame" x="0.0" y="44" width="320" height="453"/>
+                                <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                                <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                <connections>
+                                    <outlet property="dataSource" destination="6xj-ua-GA6" id="KXE-9O-h2m"/>
+                                    <outlet property="delegate" destination="6xj-ua-GA6" id="qI0-Ob-O1U"/>
+                                </connections>
+                            </tableView>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
+                    </view>
+                    <simulatedNavigationBarMetrics key="simulatedTopBarMetrics" barStyle="blackTranslucent" prompted="NO"/>
+                    <connections>
+                        <outlet property="listtableView" destination="Wdk-cz-7mr" id="oSX-RY-O9k"/>
+                        <segue destination="5L5-Ub-jrd" kind="custom" identifier="item1_2" id="iaI-jx-s2v"/>
+                    </connections>
+                </viewController>
+            </objects>
+            <point key="canvasLocation" x="557" y="-297"/>
+        </scene>
+        <!--Context View Controller-->
+        <scene sceneID="grV-sc-7lT">
+            <objects>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="C4m-rJ-MYc" userLabel="First Responder" sceneMemberID="firstResponder"/>
+                <viewController id="5L5-Ub-jrd" customClass="ContextViewController" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="TC8-SE-0Ku">
+                        <rect key="frame" x="0.0" y="20" width="320" height="460"/>
+                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                        <subviews>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" image="ItemBg.png" id="uEw-wi-LXM">
+                                <rect key="frame" x="0.0" y="0.0" width="320" height="460"/>
+                                <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                            </imageView>
+                            <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" editable="NO" id="0Ps-KL-wvm">
+                                <rect key="frame" x="0.0" y="44" width="320" height="348"/>
+                                <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                                <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
+                                <string key="text">Lorem ipsum dolor sit er elit lamet, consectetaur cillium adipisicing pecu, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum. Nam liber te conscient to factor tum poen legum odioque civiuda.</string>
+                                <color key="textColor" red="0.22352942819999999" green="0.47843140360000003" blue="0.0" alpha="1" colorSpace="deviceRGB"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
+                            </textView>
+                            <toolbar opaque="NO" clearsContextBeforeDrawing="NO" contentMode="scaleToFill" barStyle="blackTranslucent" id="YdO-AB-u6Z">
+                                <rect key="frame" x="0.0" y="416" width="320" height="44"/>
+                                <autoresizingMask key="autoresizingMask" widthSizable="YES" flexibleMinY="YES"/>
+                                <items>
+                                    <barButtonItem title="上一篇" id="C6K-3l-5r1"/>
+                                    <barButtonItem title="下一篇" id="vVT-Kx-dL2"/>
+                                    <barButtonItem width="14" style="plain" systemItem="fixedSpace" id="9S3-ZZ-z7Z"/>
+                                    <barButtonItem title="分享" id="wOo-Da-byC"/>
+                                    <barButtonItem width="12" style="plain" systemItem="fixedSpace" id="t1V-Nc-9Fo"/>
+                                    <barButtonItem title="Item" style="plain" id="NtA-HS-9sp">
+                                        <segmentedControl key="customView" opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="top" segmentControlStyle="bar" selectedSegmentIndex="0" id="JP5-bw-osO">
+                                            <rect key="frame" x="218" y="8" width="94" height="30"/>
+                                            <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                            <segments>
+                                                <segment title="白色"/>
+                                                <segment title="绿色"/>
+                                                <segment title="橙色"/>
+                                            </segments>
+                                            <color key="tintColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
+                                        </segmentedControl>
+                                    </barButtonItem>
+                                </items>
+                            </toolbar>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
+                    </view>
+                    <simulatedNavigationBarMetrics key="simulatedTopBarMetrics" barStyle="blackTranslucent" prompted="NO"/>
+                    <connections>
+                        <outlet property="centerBtn" destination="wOo-Da-byC" id="EuD-5C-V0e"/>
+                        <outlet property="contextField" destination="0Ps-KL-wvm" id="PEW-JP-u8S"/>
+                        <outlet property="nextBtn" destination="vVT-Kx-dL2" id="mOp-de-bAg"/>
+                        <outlet property="preBtn" destination="C6K-3l-5r1" id="DYG-dd-BqR"/>
+                        <outlet property="toolBar" destination="YdO-AB-u6Z" id="eHL-dY-u9M"/>
+                        <outlet property="yangseChanged" destination="JP5-bw-osO" id="u5l-J1-ItR"/>
+                    </connections>
+                </viewController>
+            </objects>
+            <point key="canvasLocation" x="928" y="-330"/>
+        </scene>
+    </scenes>
+    <resources>
+        <image name="ItemBg.png" width="16" height="16"/>
+    </resources>
+    <classes>
+        <class className="BBViewController" superclassName="UIViewController">
+            <source key="sourceIdentifier" type="project" relativePath="./Classes/BBViewController.h"/>
+            <relationships>
+                <relationship kind="outlet" name="mTableView" candidateClass="UITableView"/>
+            </relationships>
+        </class>
+        <class className="ContextViewController" superclassName="UIViewController">
+            <source key="sourceIdentifier" type="project" relativePath="./Classes/ContextViewController.h"/>
+            <relationships>
+                <relationship kind="outlet" name="centerBtn" candidateClass="UIBarButtonItem"/>
+                <relationship kind="outlet" name="contextField" candidateClass="UITextView"/>
+                <relationship kind="outlet" name="nextBtn" candidateClass="UIBarButtonItem"/>
+                <relationship kind="outlet" name="preBtn" candidateClass="UIBarButtonItem"/>
+                <relationship kind="outlet" name="titleName" candidateClass="UILabel"/>
+                <relationship kind="outlet" name="toolBar" candidateClass="UIToolbar"/>
+                <relationship kind="outlet" name="yangseChanged" candidateClass="UISegmentedControl"/>
+            </relationships>
+        </class>
+        <class className="EveryDayListViewController" superclassName="UIViewController">
+            <source key="sourceIdentifier" type="project" relativePath="./Classes/EveryDayListViewController.h"/>
+            <relationships>
+                <relationship kind="outlet" name="listtableView" candidateClass="UITableView"/>
+            </relationships>
+        </class>
+        <class className="folkSongViewController" superclassName="UIViewController">
+            <source key="sourceIdentifier" type="project" relativePath="./Classes/folkSongViewController.h"/>
+        </class>
+    </classes>
+    <simulatedMetricsContainer key="defaultSimulatedMetrics">
+        <simulatedStatusBarMetrics key="statusBar"/>
+        <simulatedOrientationMetrics key="orientation"/>
+        <simulatedScreenMetrics key="destination"/>
+    </simulatedMetricsContainer>
+</document>
